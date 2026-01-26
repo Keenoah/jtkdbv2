@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # If the requested file physically exists, serve it and stop
+    RewriteCond %{REQUEST_FILENAME} !-f
+    # Otherwise, pass the request to index.php (CakePHP)
+    RewriteRule ^ index.php [L]
+</IfModule>
